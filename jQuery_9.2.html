@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery_9.2</title>
+	<script type="text/javascript" src = "http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function () {
+			var seleccion = $('.ejemplo1');
+			if(seleccion.length){
+				console.log('existen: '+seleccion.length)
+			}else{
+				console.log('no existe el elemento');
+			}
+			seleccion.not('.cl1').text('este elemento contiene la clase cl1');
+			seleccion.has('p').text('este elemento tiene un p en su contenedor');
+			$('li').first().html('<strong>soy el elemento uno</strong>')
+			$('li').eq(2).text('soy el elemento 3')	
+
+		});
+	</script>
+</head>
+<body>
+<div class="ejemplo1 cl1">
+	<p></p>
+</div>
+<div class="ejemplo1">
+	<span></span>
+</div>
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+</body>
+</html>

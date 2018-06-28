@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<script type="text/javascript" src = "http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+		/*$(document).ready(function () {
+
+		});
+		$(document).on('ready', function () {
+
+		});
+		$(function () {
+
+		});*/
+		$(document).ready(function () {
+			var seleccion = $('.ejemplo1');
+			if(seleccion.length){
+				console.log('existen: '+seleccion.length)
+			}else{
+				console.log('no existe el elemento');
+			}
+			seleccion.not('.cl1').text('este elemento contiene la clase cl1')
+		});
+
+	</script>
+</head>
+<body>
+<div id="ejemplo1 cl1">
+	<p></p>
+</div>
+<div class="ejemplo1">
+	<span></span>
+</div>
+
+</body>
+</html>
