@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ciclos</title>
+	<title>Objetos</title>
 </head>
 <body>
 	<script type="text/javascript">
 
-		// var arreglo = new Array()
-		// 	arreglo.push(3);
-		// 	arreglo.push("Hola mundo");
-		// 	arreglo[0]="Josue";
-		// document.write(arreglo[0]);
-		// document.write(arreglo.length);
-		
-		var arreglo = [1, [1,2,3,4], ['a','b','c','d']];
-		for (var i = 0;i< arreglo[2].length; i++ ){
-			console.log(arreglo[2][i]);
-		}		
-		
+		//instancia de la clase
+		var gato = new Gato("misifus");
+		var gatodos = new Gato("hola");
+		// definicion de la clase
+		function Gato(nombre)
+		{
+			// atributo de la clase
+			this.nombre = nombre;
+			// metodo de la clase
+			this.Maullar = function () {
+				alert(this.nombre +" ¡Miawww....!");
+			};
+		}
+		alert(gato.nombre);
+		alert(gatodos.nombre);
+		gato.Maullar();
 
 	</script>
 </body>
